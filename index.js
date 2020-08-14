@@ -26,5 +26,5 @@ app.get('/:word', function(req, res) {
 });
 
 app.listen(process.env.PORT || 4000, function() {
-	console.log('Node app is working! 4000');
+	console.log('Node app is working!', process.env.PORT);
 });
