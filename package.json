@@ -1,0 +1,16 @@
+{
+  "name": "thesaurus_api",
+  "version": "1.0.0",
+  "description": "Simple thesaurus api for hangman project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M. Bagher Abiat",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "thesaurus": "0.0.1"
+  }
+}
