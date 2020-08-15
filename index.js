@@ -22,7 +22,9 @@ app.use(
 	})
 );
 app.get('/:word', function(req, res) {
-	res.json({ thesaurus: thesaurus.find(req.params.word) });
+	const payload = { thesaurus: thesaurus.find(req.params.word) };
+	if (payload.thesaurus.includes('undefined') || payload.thesaurus.includes('undefinable')) payload.thesaurus = [];
+	res.json(payload);
 });
 
 app.listen(process.env.PORT || 4000, function() {
