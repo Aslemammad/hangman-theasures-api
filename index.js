@@ -21,6 +21,6 @@ app.get('/:word', function(req, res) {
 app.get('/*', function(req, res) {
 	res.json({ thesaurus: [] });
 });
-app.listen(process.env.PORT || 4000, function() {
+app.listen(process.env.PORT || 8000, function() {
 	console.log('Node app is working!', process.env.PORT);
 });
