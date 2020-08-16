@@ -12,7 +12,9 @@ app.get('/:word', function(req, res) {
 	if (payload.thesaurus.includes('undefined') || payload.thesaurus.includes('undefinable')) payload.thesaurus = [];
 	res.json(payload);
 });
-
+app.get('/*',function(req,res) {
+	res.json({thesaurus:[]})
+})
 app.listen(process.env.PORT || 4000, function() {
 	console.log('Node app is working!', process.env.PORT);
 });
