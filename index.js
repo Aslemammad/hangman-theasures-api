@@ -8,9 +8,16 @@ app.use(
 	cors()
 );
 app.get('/:word', function(req, res) {
+	try {
+
 	const payload = { thesaurus: thesaurus.find(req.params.word) };
 	if (payload.thesaurus.includes('undefined') || payload.thesaurus.includes('undefinable')) payload.thesaurus = [];
-	res.json(payload);
+return	res.json(payload);
+
+	} catch(e) {
+res.json({thesaurus:[],error:'Bad error'})
+	}
+
 });
 app.get('/*',function(req,res) {
 	res.json({thesaurus:[]})
